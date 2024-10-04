@@ -1,5 +1,7 @@
-[server]
+[ Ubuntu server]
 
 server1 ansible_host=192.168.56.132 ansible_user=dexter
-server2 ansible_host=192.168.56.134 ansible_user=dsarcauga
 server3 ansible_host=192.168.56.135 ansible_user=dexter
+
+[CentOS server]
+server2 ansible_host=192.168.56.134 ansible_user=dsarcauga
