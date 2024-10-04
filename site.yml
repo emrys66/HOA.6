@@ -15,7 +15,7 @@
       update_cache: yes
     when: ansible_distribution is defined and ansible_distribution == "Ubuntu"
 
-- hosts: servers
+- hosts: all
   become: true
   tasks:
   
@@ -35,7 +35,7 @@
       state: latest
     when: ansible_distribution is defined and ansible_distribution == "CentOS"
 
-- hosts: server_centOS
+- hosts: Centos-Server
   become: true
   tasks:
 
