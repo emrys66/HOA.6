@@ -1,12 +1,7 @@
 ---
 - hosts: all
   become: true
-<<<<<<< HEAD
-  tasks:
-
-  - name: install apache and php for Ubuntu servers
-=======
-  pre_task:
+  pre_tasks:
   
   - name: install updates (CentOS)
     dnf:
@@ -15,14 +10,10 @@
     when: ansible_distribution == "CentOS"
 
   - name: install updates (Ubuntu)
->>>>>>> 21ec44fd7e2c696bf4bcf64b6d1350d778f61425
     apt:
       upgrade: dist
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
-<<<<<<< HEAD
-    
-=======
 
 - hosts: web_servers
   become: true
@@ -35,8 +26,7 @@
          - libapache2-mod-php
        state: latest
     when: ansible_distribution == "Ubuntu"
-
->>>>>>> 21ec44fd7e2c696bf4bcf64b6d1350d778f61425
+    
   - name: install apache and php for CentOS servers
     dnf:
       name:
@@ -44,7 +34,3 @@
         - php
       state: latest
     when: ansible_distribution == "CentOS"
-<<<<<<< HEAD
-=======
-
->>>>>>> 21ec44fd7e2c696bf4bcf64b6d1350d778f61425
